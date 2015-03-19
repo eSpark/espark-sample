@@ -1,0 +1,14 @@
+<%= image_tag "logo.png" %>
+
+<div class="page-header">
+  <h1>eSpark Teacher Dashboard</h1>
+</div>
+
+<table class="table">
+<% @students.each do |student| %>
+  <tr>
+   <td> <%= student.name %></td>
+   <td> <%= link_to "Log In As #{student.name}", student_path(student), class: "btn btn-default" %></td>
+  </tr>
+<% end %>
+</table>

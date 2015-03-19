@@ -1,0 +1,26 @@
+== README
+
+This is a coding challenge for the eSpark interview.
+
+This is a Rails app that simulates a very simplified version of the student and teacher experience in eSpark.
+
+* The index page represents the teacher's dashboard to see their students. In the production app you would log in and the experience would be personalized by teacher; in this demo app, there is only one global view of all students.
+
+* The students/show page represents the student's view of the app after logging in. In production, this would be shown on an iPad and contain all of the curriculum; in this demo, it shows just the student's name.
+
+=== Challenge
+
+The challenge is to implement a feature on top of this basic app. We want to give students a way to request help from their teacher from their iPad. The components should include:
+
+* A button in the student experience labeled "Request Help From My Teacher". When a student presses the button, the button disappears and instead shows an indicator that they have notified the teacher.
+
+* In the teacher dashboard view, the teacher should see an alert at the top of the page with any students that have recently requested help within the last day.
+
+* Teacher should also be able to see the last time that a given student requested help.
+
+* Teacher should have the ability to clear the request (presumably after they visit with the student). In this case, then the student sees the button again.
+
+=== What we're looking for
+
+We'd love to see this submitted as a pull request on this repository. We are looking for clarity of code, fidelity of implementation, and style including appropriate comments and tests.
+
