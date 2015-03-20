@@ -1,1 +1,4 @@
 <h1>Welcome, <%= @student.name %></h1>
+
+<%= link_to "Request Help", student_contacts_path(@student), method: "POST", class:"btn btn-primary" %>
+

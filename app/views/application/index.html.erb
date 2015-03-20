@@ -1,14 +1,29 @@
 <%= image_tag "logo.png" %>
 
-<div class="page-header">
-  <h1>eSpark Teacher Dashboard</h1>
+<div class="page-header clearfix">
+  <h1 class="pull-left">eSpark Teacher Dashboard </h1>
+  <h3 class="pull-right text-danger">
+    <%= pluralize(@new_requests_count, "Help Request") %>
+  </h3>
 </div>
 
 <table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Log in</th>
+    <th>Requested Help?</th>
+    <th>Last Requested Help</th>
+  </tr>
 <% @students.each do |student| %>
   <tr>
    <td> <%= student.name %></td>
    <td> <%= link_to "Log In As #{student.name}", student_path(student), class: "btn btn-default" %></td>
+   <td>
+    <%= link_to "Help Student", student_contact_path(student, student.contacts.last), method: "PATCH", class:"btn btn-danger" if student.requested_help? %>
+   </td>
+   <td>
+    <%= student.contacts.last.try(:formated_requested_at) %>
+   </td>
   </tr>
 <% end %>
 </table>

@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    @students = Student.all
+    # Students ordered by when they last needed help
+    @students = Student.all.order("last_requested_help_at DESC")
+    @new_requests_count = Contact.where("completed_at IS NULL").count
   end
-
 end

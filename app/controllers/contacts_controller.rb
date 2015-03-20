@@ -1,0 +1,25 @@
+class ContactsController < ApplicationController
+  def create
+    # params[:contact][:student_id]
+    @student = Student.find(params[:student_id])
+    contact = @student.contacts.new
+    contact.requested_at = Time.now
+
+    if contact.save
+      # Update cache counter for ordering students in application#index
+      @student.update_attributes(last_requested_help_at: contact.requested_at)
+
+      redirect_to @student
+    end
+  end
+
+  def update
+    # params[:contact][:student_id]
+    @contact = Contact.find(params[:contact][:id])
+    contact.completed_at = Time.now
+
+    if contact.save
+      redirect_to @student
+    end
+  end
+end
