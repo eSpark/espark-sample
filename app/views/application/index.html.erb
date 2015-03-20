@@ -4,9 +4,9 @@
   <h1>eSpark Teacher Dashboard</h1>
 </div>
 
-<% if HelpRequest.where(active: true).first %>
+<% if HelpRequest.any_active? %>
   <%@students.each do |s|%>
-    <%hr = s.help_requests.where(active: true).first%>
+    <%hr = s.active_help_request%>
     <%if hr%>
       <h3><%="#{hr.student.name} needs help!"%></h3>
     <%end%>

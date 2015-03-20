@@ -7360,3 +7360,131 @@ Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 
 Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 10:42:08 -0500
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2015-03-20 15:40:10 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.8ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (1.7ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.9ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.3ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (470.3ms)
+Completed 200 OK in 1022ms (Views: 950.1ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 15:40:16 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.9ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHelpRequest Load (1.4ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  Rendered students/show.html.erb within layouts/student (42.9ms)
+Completed 200 OK in 565ms (Views: 518.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/students/3" for ::1 at 2015-03-20 15:40:22 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (2.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHelpRequest Load (1.0ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (84.7ms)
+Completed 200 OK in 631ms (Views: 581.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 15:40:26 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVpaN8ZufXhhkuC6n/L7Utvckc8i2DFKWEVV37V0uVcbhvntBxTMYEe+8e/Hq+2MFyT3LrJO6UNw3OhV8rlg4g==", "help_request"=>{"student_id"=>"3"}, "commit"=>"Request Help"}
+  [1m[36mStudent Load (1.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.8ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "help_requests" ("student_id", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", 3], ["active", "t"], ["created_at", "2015-03-20 20:40:26.232372"], ["updated_at", "2015-03-20 20:40:26.232372"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 154ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/students/3" for ::1 at 2015-03-20 15:40:26 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (1.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (44.6ms)
+Completed 200 OK in 559ms (Views: 535.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 15:40:32 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.4ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (1.6ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (232.5ms)
+Completed 200 OK in 748ms (Views: 712.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 15:40:33 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 15:40:38 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.8ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (2.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.3ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.3ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (292.6ms)
+Completed 200 OK in 819ms (Views: 789.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 15:40:39 -0500

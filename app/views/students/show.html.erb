@@ -1,6 +1,6 @@
 <h1>Welcome, <%= @student.name %></h1>
 
-<% unless @student.help_requests.where(active: true).first %>
+<% unless @student.active_help_request %>
   <%= form_for @help_request, url: {:controller => 'help_requests', :action => 'create'} do |f| %>
     <%= f.hidden_field :student_id, value: @student.id %>
     <%= f.submit "Request Help" %>
