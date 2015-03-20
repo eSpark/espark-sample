@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :students
+  resources :help_requests, only: [:create, :update]
   root to: "application#index"
 end
 
