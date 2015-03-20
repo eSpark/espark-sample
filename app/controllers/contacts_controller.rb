@@ -15,7 +15,8 @@ class ContactsController < ApplicationController
 
   def update
     # params[:contact][:student_id]
-    @contact = Contact.find(params[:contact][:id])
+    @student = Student.find(params[:student_id])
+    contact = Contact.find(params[:id])
     contact.completed_at = Time.now
 
     if contact.save

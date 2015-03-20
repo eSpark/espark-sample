@@ -8947,3 +8947,1644 @@ Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.
 
 
 Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:40:35 -0700
+
+
+Started PATCH "/students/3/contacts/2" for 127.0.0.1 at 2015-03-20 16:42:58 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"8SctUlD53r+0/bnpu8tN2+Qk1NO2Edt4OqL4WFqIANjxKn3CJo8yBjzMQjCMwGjdPC6Agy3hGHck4J4XlOwycA==", "student_id"=>"3", "id"=>"2"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/contacts_controller.rb:19:in `update'
+
+
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.2ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.5ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 161ms (Views: 143.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:43:14 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.3ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:43:15 -0700
+
+
+Started PATCH "/students/3/contacts/2" for 127.0.0.1 at 2015-03-20 16:43:16 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"HR17UyeSZplh4OEjIXnqgy0ILEiOPIHr9+1bc8xgQUcdECvDUeSKIOnRGvoWcs+F9QJ4GBXMQuTprz08AgRz7w==", "student_id"=>"3", "id"=>"2"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 71ms
+
+NameError (undefined local variable or method `contact' for #<ContactsController:0x00000105e4dd28>):
+  app/controllers/contacts_controller.rb:19:in `update'
+
+
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (34.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:43:35 -0700
+Processing by ApplicationController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 2]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 89ms (Views: 77.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:43:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+Processing by ApplicationController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 2]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:43:37 -0700
+
+
+Started PATCH "/students/3/contacts/2" for 127.0.0.1 at 2015-03-20 16:43:39 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"Fun7Lb+d4gXExwESHjYCLgMEO4cydS+ZoZ2JYpG45bMW5Ku9yesOvEz2+sspPSco2w5v16mF7Ja/3+8tX9zXGw==", "student_id"=>"3", "id"=>"2"}
+  [1m[35mContact Load (0.2ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 7ms
+
+NameError (undefined local variable or method `contact' for #<ContactsController:0x000001076ae598>):
+  app/controllers/contacts_controller.rb:21:in `update'
+
+
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Penelope/.rvm/gems/ruby-2.0.0-p481/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.2ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 80ms (Views: 67.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:00 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.3ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.2ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 121ms (Views: 117.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:01 -0700
+
+
+Started PATCH "/students/3/contacts/2" for 127.0.0.1 at 2015-03-20 16:44:02 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"6VvAJJQYJ5lSFoOVYwRIpPe3LGzdFdSeajkj8al+cErpVpC04m7LINoneExUD22iL714PEblF5F0e0W+ZxpC4g==", "student_id"=>"3", "id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:44:02.833849"], ["updated_at", "2015-03-20 23:44:02.834857"], ["id", 2]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:44:02 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.8ms)
+Completed 200 OK in 105ms (Views: 103.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:03 -0700
+
+
+Started POST "/students/3/contacts" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"IL7F6V0Dm8rqUX/LUnSFizUotu4GB+WVsS0jCIkxHdwgs5V5K3V3c2JghBJlf6CN7SLivp33Jpqvb0VHR1UvdA==", "student_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("student_id", "requested_at", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", 3], ["requested_at", "2015-03-20 23:44:12.574058"], ["created_at", "2015-03-20 23:44:12.574516"], ["updated_at", "2015-03-20 23:44:12.574516"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "students" SET "last_requested_help_at" = ?, "updated_at" = ? WHERE "students"."id" = ?  [["last_requested_help_at", "2015-03-20 23:44:12.574058"], ["updated_at", "2015-03-20 23:44:12.577818"], ["id", 3]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 13ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.3ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:12 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 90ms (Views: 86.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:44:16 -0700
+
+
+Started PATCH "/students/1/contacts/1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"1vFCxCylk2i8dhLOZPSfC4OVLtXeQ4Ykomg6cjhBCMXW/BJUWtN/0TRH6RdT/7oNW596hUWzRSu8Klw99iU6bQ==", "student_id"=>"1", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:44:18.033648"], ["updated_at", "2015-03-20 23:44:18.034531"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (0.4ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:18 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 2]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:44:19 -0700
+
+
+Started GET "/students/4" for 127.0.0.1 at 2015-03-20 16:44:22 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered students/show.html.erb within layouts/student (0.5ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:22 -0700
+
+
+Started POST "/students/4/contacts" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"6Lpev/aMlw8Ty0/RkPB0rOIIYgP8zfC0QL33iAMX173otw4vgPp7tpv6tAin+1GqOgI2U2c9M7te/5HHzXPlFQ==", "student_id"=>"4"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("student_id", "requested_at", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", 4], ["requested_at", "2015-03-20 23:44:24.112481"], ["created_at", "2015-03-20 23:44:24.112936"], ["updated_at", "2015-03-20 23:44:24.112936"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "students" SET "last_requested_help_at" = ?, "updated_at" = ? WHERE "students"."id" = ?  [["last_requested_help_at", "2015-03-20 23:44:24.112481"], ["updated_at", "2015-03-20 23:44:24.116617"], ["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/4
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/students/4" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered students/show.html.erb within layouts/student (0.8ms)
+Completed 200 OK in 99ms (Views: 98.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started POST "/students/4/contacts" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"u+2XHARufm5WCLlqiSugIhTdlcIMBEOGuZnmUOPc2iu74MeMchiS1945QrO+IIUkzNfBkpf0gImn24AfLbjogw==", "student_id"=>"4"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contacts" ("student_id", "requested_at", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", 4], ["requested_at", "2015-03-20 23:44:24.432194"], ["created_at", "2015-03-20 23:44:24.432863"], ["updated_at", "2015-03-20 23:44:24.432863"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "students" SET "last_requested_help_at" = ?, "updated_at" = ? WHERE "students"."id" = ?  [["last_requested_help_at", "2015-03-20 23:44:24.432194"], ["updated_at", "2015-03-20 23:44:24.437333"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/4
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/students/4" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered students/show.html.erb within layouts/student (0.5ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:24 -0700
+
+
+Started GET "/students/4" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered students/show.html.erb within layouts/student (0.4ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:26 -0700
+
+
+Started GET "/students/4" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered students/show.html.erb within layouts/student (0.2ms)
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:44:27 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:44:28 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:44:29 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:44:29 -0700
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:46:21 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.5ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/students/3/contacts" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"cVA9/H3eX9gOw9V0eZwx5qIDYbAe+Vsj00zTHE26ALtxXW1sC6izYYbyLq1OlxTgegk14IUJmCzNDrVTg94yEw==", "student_id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "contacts" ("student_id", "requested_at", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["student_id", 3], ["requested_at", "2015-03-20 23:46:23.402301"], ["created_at", "2015-03-20 23:46:23.403268"], ["updated_at", "2015-03-20 23:46:23.403268"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "students" SET "last_requested_help_at" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["last_requested_help_at", "2015-03-20 23:46:23.402301"], ["updated_at", "2015-03-20 23:46:23.406768"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.4ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:46:23 -0700
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.2ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:46:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:46:26 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:46:26 -0700
+
+
+Started PATCH "/students/3/contacts/6" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"c7DMd0AI+tgFTRGPU+kY2+cr/kZCh0OxPW+fN5vUkJVzvZznNn4WYY186lZk4j3dPyGqFtl3gL4jLfl4VbCiPQ==", "student_id"=>"3", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:46:33.025127"], ["updated_at", "2015-03-20 23:46:33.025725"], ["id", 6]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.3ms)
+Completed 200 OK in 91ms (Views: 88.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:46:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:46:35 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:46:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:46:37 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.2ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 104ms (Views: 101.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:46:38 -0700
+
+
+Started PATCH "/students/3/contacts/6" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"sEJR5jauSwIA9YBptd88/OKYx+URzXIOA2o/xk+dcnmwTwF2QNinu4jEe7CC1Bn6OpKTtYo9sQEdKFmJgflA0Q==", "student_id"=>"3", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:46:41.020763"], ["updated_at", "2015-03-20 23:46:41.021497"], ["id", 6]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.6ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:46:41 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:45 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:46:46 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:46 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:46 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:46 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:46 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:47 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:47 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:47 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:46:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:46:57 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" ASC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" ASC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:46:58 -0700
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  ORDER BY "contacts"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 93ms (Views: 90.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:47:45 -0700
+
+
+Started PATCH "/students/3/contacts/6" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"9Fove2lPAJFNM9gqWIzjSc0/kQniNdm7FAdd26Co9rr0V3/rHznsKMUCI/Nvh8ZPFTXFWXnFGrQKRTuUbszEEg==", "student_id"=>"3", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:47:47.385870"], ["updated_at", "2015-03-20 23:47:47.386629"], ["id", 6]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.4ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:47:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.2ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 102ms (Views: 98.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:47:50 -0700
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:47:54 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.erb within layouts/student (0.3ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:47:54 -0700
+  [1m[35mStudent Load (0.5ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.2ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?[0m  [["completed_at", "2015-03-20 23:49:33.943107"], ["updated_at", "2015-03-20 23:49:33.948568"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:49:33.952298"], ["updated_at", "2015-03-20 23:49:33.953588"], ["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?[0m  [["completed_at", "2015-03-20 23:49:33.955516"], ["updated_at", "2015-03-20 23:49:33.956435"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:49:33.958286"], ["updated_at", "2015-03-20 23:49:33.959711"], ["id", 4]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?[0m  [["completed_at", "2015-03-20 23:49:33.963459"], ["updated_at", "2015-03-20 23:49:33.964437"], ["id", 5]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:49:33.966418"], ["updated_at", "2015-03-20 23:49:33.967546"], ["id", 6]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (4.7ms)
+Completed 200 OK in 120ms (Views: 118.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:51:00 -0700
+
+
+Started POST "/students/3/contacts" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"YT3AQ+YsHyclRTqEoCPlOU5yzzMpqoPSI+jwF/b+cgphMJDTkFrznq10wV2XKMA/lnibY7JaQN09qpZYOJpAog==", "student_id"=>"3"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "contacts" ("student_id", "requested_at", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["student_id", 3], ["requested_at", "2015-03-20 23:51:01.614443"], ["created_at", "2015-03-20 23:51:01.615034"], ["updated_at", "2015-03-20 23:51:01.615034"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "students" SET "last_requested_help_at" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["last_requested_help_at", "2015-03-20 23:51:01.614443"], ["updated_at", "2015-03-20 23:51:01.618157"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (1.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:51:01 -0700
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:51:11 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (1.9ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:51:12 -0700
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (1.9ms)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:15 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:16 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:51:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+Processing by ApplicationController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 2]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:51:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+Processing by ApplicationController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 4]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 1]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 2]]
+  [1m[35mContact Load (0.4ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+
+
+Started PATCH "/students/3/contacts/7" for 127.0.0.1 at 2015-03-20 16:51:24 -0700
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"d95xDpfO9ZjCIVUIaJeRze5Ly0YpYjGagQEVYiS7sIR30yGe4bgZIUoQrtFfnLTLNkGfFrKS8pWfQ3Mt6t+CLA==", "student_id"=>"3", "id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mContact Load (0.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "contacts" SET "completed_at" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["completed_at", "2015-03-20 23:51:24.999373"], ["updated_at", "2015-03-20 23:51:25.000223"], ["id", 7]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (1.8ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:51:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+Processing by ApplicationController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE (completed_at IS NULL)
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last_requested_help_at DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 3]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 4]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 1]]
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)  [["student_id", 2]]
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."student_id" = ?  ORDER BY "contacts"."id" DESC LIMIT 1[0m  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 92ms (Views: 89.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for 127.0.0.1 at 2015-03-20 16:51:28 -0700
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "contacts" WHERE "contacts"."student_id" = ? AND (completed_at IS NULL)[0m  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (5.0ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/contacts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/contacts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-20 16:51:31 -0700
+
+
+Started GET "/assets/student-background.png" for 127.0.0.1 at 2015-03-20 16:51:32 -0700
