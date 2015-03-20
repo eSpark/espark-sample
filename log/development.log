@@ -6268,3 +6268,1223 @@ Processing by StudentsController#show as HTML
   [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered students/show.html.erb within layouts/student (0.1ms)
 Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 09:36:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered application/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 2471ms (Views: 2431.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 09:36:38 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 09:36:38 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 09:36:38 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 09:36:38 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 09:36:38 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 09:36:38 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 09:38:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (1.9ms)
+Completed 200 OK in 123ms (Views: 71.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 09:38:27 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 09:38:27 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 09:38:27 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 09:38:27 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 09:38:27 -0500
+
+
+Started GET "/assets/student-background.png" for ::1 at 2015-03-20 09:38:27 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 09:42:24 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (0.5ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateHelpRequests (20150320145157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "help_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150320145157"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 09:55:33 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (0.1ms)
+Completed 200 OK in 53ms (Views: 43.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 09:59:04 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (28.1ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x007ff1a71b29e8>:0x007ff1a36eabd0>):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: 
+    3: <%= link_to "Log In As #{student.name}", student_path(student), class: "btn btn-default" %>
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337902889140'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (95.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (217.0ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 09:59:05 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (22.5ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x007ff1a71b29e8>:0x007ff1a5a53888>):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: 
+    3: <%= link_to "Log In As #{student.name}", student_path(student), class: "btn btn-default" %>
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337921453600'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (114.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (84.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (190.0ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 09:59:55 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (23.1ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x007ff1a71b29e8>:0x007ff1a4330f70>):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: <!-- 
+    3: <%= link_to "Log In As #{student.name}", student_path(student), class: "btn btn-default" %> -->
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337909294640'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (128.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (102.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (208.8ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:00:11 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (0.7ms)
+Completed 200 OK in 58ms (Views: 41.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:00:11 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:00:11 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:00:11 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:00:11 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:00:11 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:09:55 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (6.0ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: 
+    3: <%= form_for @help_request, url: {action: "create"} do |f| %>
+    4:   <%= f.submit "Request Help" %>
+    5: <% end %>
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337920748480'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (6.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (117.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (246.1ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:12:36 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (2.2ms)
+Completed 200 OK in 61ms (Views: 45.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:12:36 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:12:36 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:12:36 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:12:36 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:12:37 -0500
+
+
+Started POST "/students" for ::1 at 2015-03-20 10:12:39 -0500
+
+AbstractController::ActionNotFound (The action 'create' could not be found for StudentsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/meara/.rvm/rubies/ruby-2.2-head/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/meara/.rvm/rubies/ruby-2.2-head/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/meara/.rvm/rubies/ruby-2.2-head/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (100.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (232.1ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:15:07 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (5.5ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"help_requests", :id=>"1"}):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: 
+    3: <%= form_for @help_request, url: url_for(:controller => 'help_requests', :action => 'create') do |f| %>
+    4:   <%= f.submit "Request Help" %>
+    5: <% end %>
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337908885940'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (85.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (191.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 10:16:11 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered application/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:16:11 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:16:11 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:16:11 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:16:11 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 10:16:11 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:16:11 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:16:13 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (8.6ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"help_requests", :id=>"1"}):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: 
+    3: <%= form_for @help_request, url: {:controller => 'help_requests', :action => 'create'} do |f| %>
+    4:   <%= f.submit "Request Help" %>
+    5: <% end %>
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337921352260'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (100.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (213.8ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:16:13 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (15.2ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"help_requests", :id=>"1"}):
+    1: <h1>Welcome, <%= @student.name %></h1>
+    2: 
+    3: <%= form_for @help_request, url: {:controller => 'help_requests', :action => 'create'} do |f| %>
+    4:   <%= f.submit "Request Help" %>
+    5: <% end %>
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__1425500458743839362_70337933335840'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (120.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (85.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (190.7ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:18:28 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (1.9ms)
+Completed 200 OK in 99ms (Views: 46.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:18:28 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:18:28 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:18:28 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:18:28 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:18:28 -0500
+
+
+Started GET "/assets/student-background.png" for ::1 at 2015-03-20 10:18:28 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:18:31 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (0.9ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:18:31 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:18:31 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:18:31 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:18:31 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:18:31 -0500
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 10:18:33 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZvXOQLRfaIQgMwqDPnMszAWe5HiJuR4h7ryIjO2sqAssKW2adSXZnAYfG9ZmKjoSyWaCmRkvxijGJTUGqmFxvg==", "commit"=>"Request Help"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["active", "t"], ["created_at", "2015-03-20 15:18:33.738293"], ["updated_at", "2015-03-20 15:18:33.738293"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 500 Internal Server Error in 11ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"students"} missing required keys: [:id]):
+  app/controllers/help_requests_controller.rb:5:in `create'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (106.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (224.7ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:22:23 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (2.9ms)
+Completed 500 Internal Server Error in 11ms
+
+SyntaxError (/Users/meara/Desktop/espark-sample/app/views/students/show.html.erb:4: syntax error, unexpected =>, expecting ')'
+/Users/meara/Desktop/espark-sample/app/views/students/show.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/meara/Desktop/espark-sample/app/views/students/show.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/meara/Desktop/espark-sample/app/views/students/show.html.erb:9: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/students/show.html.erb:4: syntax error, unexpected =>, expecting ')'
+  app/views/students/show.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+  app/views/students/show.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/students/show.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (89.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (200.6ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:22:53 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (14.3ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:22:53 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:22:53 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:22:53 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:22:53 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:22:53 -0500
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 10:23:04 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u+EeeJg0oQYGl9L5BoHkhRow8JuoMXHSXMGvtrgk9a7xPb2iWU4QHiC7w6xe2PJb1siWejinqdt0WBI8/+ksGw==", "help_request"=>{"student_id"=>"1"}, "commit"=>"Request Help"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)  [["active", "t"], ["created_at", "2015-03-20 15:23:04.771265"], ["updated_at", "2015-03-20 15:23:04.771265"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 28ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"students"} missing required keys: [:id]):
+  app/controllers/help_requests_controller.rb:5:in `create'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (98.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (209.6ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:24:19 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (2.1ms)
+Completed 200 OK in 64ms (Views: 45.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:24:19 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:24:19 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:24:19 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:24:19 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:24:19 -0500
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 10:24:20 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rfh1FsUkA1Y8DP/Pid1MAP34Qo+JXVhGb3Atz0B6FQgPJNbMBF6yThog7prRhFreMQAkbhnLgE9H6ZBFB7fMvQ==", "help_request"=>{"student_id"=>"1"}, "commit"=>"Request Help"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)  [["active", "t"], ["created_at", "2015-03-20 15:24:20.784058"], ["updated_at", "2015-03-20 15:24:20.784058"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=):
+  app/controllers/help_requests_controller.rb:5:in `create'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (94.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (243.3ms)
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 10:25:01 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rfh1FsUkA1Y8DP/Pid1MAP34Qo+JXVhGb3Atz0B6FQgPJNbMBF6yThog7prRhFreMQAkbhnLgE9H6ZBFB7fMvQ==", "help_request"=>{"student_id"=>"1"}, "commit"=>"Request Help"}
+Completed 500 Internal Server Error in 103033ms
+
+SystemExit (exit):
+  app/controllers/help_requests_controller.rb:5:in `exit'
+  app/controllers/help_requests_controller.rb:5:in `create'
+  app/controllers/help_requests_controller.rb:5:in `create'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (399.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (100.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (644.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (3.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (153.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (11.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (327.9ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:26:48 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (29.0ms)
+Completed 200 OK in 549ms (Views: 402.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:26:49 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:26:49 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:26:49 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:26:49 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:26:49 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:27:07 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (1.6ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (42.8ms)
+Completed 200 OK in 880ms (Views: 648.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:27:09 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:27:09 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:27:09 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:27:09 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:27:09 -0500
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 10:27:12 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hEBfLNuJU1DWBnRMkOsMIPBXhneoNhbNkcjjcc8wzVrOnPz2GvPiSPAqZRnIshr+PK/gljigzsS5UV77iP0U7w==", "help_request"=>{"student_id"=>"1"}, "commit"=>"Request Help"}
+  [1m[36mStudent Load (14.9ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "help_requests" ("student_id", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", 1], ["active", "t"], ["created_at", "2015-03-20 15:27:12.631891"], ["updated_at", "2015-03-20 15:27:12.631891"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 174ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:27:12 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (28.7ms)
+Completed 200 OK in 695ms (Views: 651.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:27:13 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:27:13 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:27:13 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:27:13 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:27:14 -0500
+  [1m[36mHelpRequest Load (2.9ms)[0m  [1mSELECT "help_requests".* FROM "help_requests"[0m
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:28:49 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/student (28.3ms)
+Completed 200 OK in 626ms (Views: 598.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:28:50 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:28:50 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:28:50 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:28:50 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:28:50 -0500
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students"  ORDER BY "students"."id" ASC LIMIT 1[0m
+  [1m[35mHelpRequest Load (0.3ms)[0m  SELECT "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ?  [["student_id", 1]]
+  [1m[36mHelpRequest Load (0.2ms)[0m  [1mSELECT "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (0.4ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:32:05 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHelpRequest Load (1.4ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  Rendered students/show.html.erb within layouts/student (215.1ms)
+Completed 200 OK in 849ms (Views: 642.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:32:07 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:32:07 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:32:07 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:32:07 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:32:07 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 10:32:18 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (3.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  Rendered students/show.html.erb within layouts/student (72.9ms)
+Completed 200 OK in 763ms (Views: 728.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:32:19 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:32:19 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:32:19 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:32:19 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:32:19 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 10:32:34 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mStudent Load (10.0ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered application/index.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 720ms (Views: 686.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:32:35 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:32:35 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 10:32:35 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:32:35 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:32:35 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:32:35 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 10:36:13 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (42.3ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined method `help_requests' for nil:NilClass):
+    4:   <h1>eSpark Teacher Dashboard</h1>
+    5: </div>
+    6: 
+    7: <% if @student.help_requests.where(active: true).first %>
+    8:   <%students.each do |s|%>
+    9:     <%hr = s.help_requests.where(active: true).first%>
+   10:     <h3><%"#{hr.student.name} needs help!"%></h3>
+  app/views/application/index.html.erb:7:in `_app_views_application_index_html_erb__3235883621796757486_70337934381140'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (656.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (155.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (963.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (4.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (13.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (238.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (443.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 10:36:41 -0500
+Processing by ApplicationController#index as HTML
+  [1m[35mStudent Load (1.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered application/index.html.erb within layouts/application (105.3ms)
+Completed 500 Internal Server Error in 126ms
+
+ActionView::Template::Error (undefined method `help_requests' for #<Student::ActiveRecord_Relation:0x007ff1a37b2838>):
+    4:   <h1>eSpark Teacher Dashboard</h1>
+    5: </div>
+    6: 
+    7: <% if @students.help_requests.where(active: true).first %>
+    8:   <%students.each do |s|%>
+    9:     <%hr = s.help_requests.where(active: true).first%>
+   10:     <h3><%"#{hr.student.name} needs help!"%></h3>
+  app/views/application/index.html.erb:7:in `_app_views_application_index_html_erb__3235883621796757486_70337921965220'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (617.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (147.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (889.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (138.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (13.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (337.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 10:37:26 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (81.0ms)
+Completed 500 Internal Server Error in 165ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::HelpRequests):
+    4:   <h1>eSpark Teacher Dashboard</h1>
+    5: </div>
+    6: 
+    7: <% if HelpRequests.where(active: true).first %>
+    8:   <%@students.each do |s|%>
+    9:     <%hr = s.help_requests.where(active: true).first%>
+   10:     <h3><%"#{hr.student.name} needs help!"%></h3>
+  app/views/application/index.html.erb:7:in `_app_views_application_index_html_erb__3235883621796757486_70337935010740'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (636.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (141.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (924.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (11.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (20.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (196.8ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (371.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 10:37:57 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (11.0ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (0.9ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.6ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  Rendered application/index.html.erb within layouts/application (125.3ms)
+Completed 500 Internal Server Error in 143ms
+
+ActionView::Template::Error (undefined method `student' for nil:NilClass):
+     7: <% if HelpRequest.where(active: true).first %>
+     8:   <%@students.each do |s|%>
+     9:     <%hr = s.help_requests.where(active: true).first%>
+    10:     <h3><%"#{hr.student.name} needs help!"%></h3>
+    11:   <%end%>
+    12: <% else%>
+    13:   <h3>No active help requests.</h3>
+  app/views/application/index.html.erb:10:in `block in _app_views_application_index_html_erb__3235883621796757486_70337903072120'
+  app/views/application/index.html.erb:8:in `_app_views_application_index_html_erb__3235883621796757486_70337903072120'
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (356.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (80.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (561.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (119.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (261.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 10:38:59 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/Users/meara/Desktop/espark-sample/app/views/application/index.html.erb:11: syntax error, unexpected '<'
+      <h3><%"#{hr.student.name} need...
+       ^
+/Users/meara/Desktop/espark-sample/app/views/application/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/application/index.html.erb:11: syntax error, unexpected '<'
+  app/views/application/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (382.7ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (87.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (606.3ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (137.5ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /Users/meara/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (273.3ms)
+
+
+Started GET "/" for ::1 at 2015-03-20 10:39:28 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (0.7ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (0.6ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (0.6ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (0.7ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (121.6ms)
+Completed 200 OK in 402ms (Views: 390.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:39:28 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:39:29 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:39:29 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 10:39:29 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:39:29 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:39:29 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 10:39:58 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.6ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (2.0ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.4ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (227.1ms)
+Completed 200 OK in 712ms (Views: 688.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 10:39:59 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:39:59 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:39:59 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:39:59 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:39:59 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:39:59 -0500
+  [1m[36mHelpRequest Load (0.3ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (0.5ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  [1m[36mHelpRequest Load (0.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (0.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+
+
+Started GET "/" for ::1 at 2015-03-20 10:42:06 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.4ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (2.6ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.0ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (0.9ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (248.1ms)
+Completed 200 OK in 711ms (Views: 694.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 10:42:07 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 10:42:07 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 10:42:08 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 10:42:08 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 10:42:08 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 10:42:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2015-03-20 15:40:10 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.8ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (1.7ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.9ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.3ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (470.3ms)
+Completed 200 OK in 1022ms (Views: 950.1ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 15:40:13 -0500
+
+
+Started GET "/students/1" for ::1 at 2015-03-20 15:40:16 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.9ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHelpRequest Load (1.4ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  Rendered students/show.html.erb within layouts/student (42.9ms)
+Completed 200 OK in 565ms (Views: 518.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/students/3" for ::1 at 2015-03-20 15:40:22 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (2.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHelpRequest Load (1.0ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (84.7ms)
+Completed 200 OK in 631ms (Views: 581.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/help_requests" for ::1 at 2015-03-20 15:40:26 -0500
+Processing by HelpRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVpaN8ZufXhhkuC6n/L7Utvckc8i2DFKWEVV37V0uVcbhvntBxTMYEe+8e/Hq+2MFyT3LrJO6UNw3OhV8rlg4g==", "help_request"=>{"student_id"=>"3"}, "commit"=>"Request Help"}
+  [1m[36mStudent Load (1.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.8ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "help_requests" ("student_id", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", 3], ["active", "t"], ["created_at", "2015-03-20 20:40:26.232372"], ["updated_at", "2015-03-20 20:40:26.232372"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 154ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/students/3" for ::1 at 2015-03-20 15:40:26 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (1.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 3]]
+  Rendered students/show.html.erb within layouts/student (44.6ms)
+Completed 200 OK in 559ms (Views: 535.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 15:40:27 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 15:40:32 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.4ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (1.6ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (232.5ms)
+Completed 200 OK in 748ms (Views: 712.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 15:40:33 -0500
+
+
+Started GET "/" for ::1 at 2015-03-20 15:40:38 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mHelpRequest Load (1.8ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35mStudent Load (2.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35mHelpRequest Load (1.3ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 2]]
+  [1m[36mHelpRequest Load (1.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 3]]
+  [1m[35mHelpRequest Load (1.3ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 4]]
+  Rendered application/index.html.erb within layouts/application (292.6ms)
+Completed 200 OK in 819ms (Views: 789.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/logo-d19d677fdf75c9334fcf30e2d639cf17.png" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2015-03-20 15:40:39 -0500
+
+
+Started GET "/assets/application-364c585e789271ecb20c8fabc47b12b9.css?body=1" for ::1 at 2015-03-20 15:40:39 -0500

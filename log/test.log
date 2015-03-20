@@ -1,0 +1,218 @@
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "help_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "grade_level" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150320145157')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150319152354')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:01:11.021270"], ["updated_at", "2015-03-20 16:01:11.021270"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["active", "t"], ["student_id", 1], ["created_at", "2015-03-20 16:01:11.057334"], ["updated_at", "2015-03-20 16:01:11.057334"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:01:11.071140"], ["updated_at", "2015-03-20 16:01:11.071140"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["active", "f"], ["student_id", 1], ["created_at", "2015-03-20 16:01:11.074620"], ["updated_at", "2015-03-20 16:01:11.074620"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:01:11.079497"], ["updated_at", "2015-03-20 16:01:11.079497"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)  [["active", "t"], ["created_at", "2015-03-20 16:03:41.835787"], ["updated_at", "2015-03-20 16:03:41.835787"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["active", "f"], ["created_at", "2015-03-20 16:03:41.847297"], ["updated_at", "2015-03-20 16:03:41.847297"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:03:41.857404"], ["updated_at", "2015-03-20 16:03:41.857404"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["active", "t"], ["student_id", 1], ["created_at", "2015-03-20 16:03:41.885255"], ["updated_at", "2015-03-20 16:03:41.885255"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:03:41.897535"], ["updated_at", "2015-03-20 16:03:41.897535"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["active", "f"], ["student_id", 1], ["created_at", "2015-03-20 16:03:41.901156"], ["updated_at", "2015-03-20 16:03:41.901156"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.0ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:03:41.905671"], ["updated_at", "2015-03-20 16:03:41.905671"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.0ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)  [["active", "t"], ["created_at", "2015-03-20 16:03:51.911804"], ["updated_at", "2015-03-20 16:03:51.911804"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHelpRequest Load (0.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["active", "f"], ["created_at", "2015-03-20 16:03:51.935348"], ["updated_at", "2015-03-20 16:03:51.935348"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:03:51.946657"], ["updated_at", "2015-03-20 16:03:51.946657"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["active", "t"], ["student_id", 1], ["created_at", "2015-03-20 16:03:51.973547"], ["updated_at", "2015-03-20 16:03:51.973547"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:03:51.979465"], ["updated_at", "2015-03-20 16:03:51.979465"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["active", "f"], ["student_id", 1], ["created_at", "2015-03-20 16:03:51.982913"], ["updated_at", "2015-03-20 16:03:51.982913"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:03:51.989479"], ["updated_at", "2015-03-20 16:03:51.989479"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)  [["active", "t"], ["created_at", "2015-03-20 16:04:32.645590"], ["updated_at", "2015-03-20 16:04:32.645590"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1
+  [1m[36m (4.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHelpRequest Load (0.3ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["active", "f"], ["created_at", "2015-03-20 16:04:32.667594"], ["updated_at", "2015-03-20 16:04:32.667594"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:04:32.679704"], ["updated_at", "2015-03-20 16:04:32.679704"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["active", "t"], ["student_id", 1], ["created_at", "2015-03-20 16:04:32.714528"], ["updated_at", "2015-03-20 16:04:32.714528"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:04:32.722485"], ["updated_at", "2015-03-20 16:04:32.722485"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["active", "f"], ["student_id", 1], ["created_at", "2015-03-20 16:04:32.725876"], ["updated_at", "2015-03-20 16:04:32.725876"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 16:04:32.732385"], ["updated_at", "2015-03-20 16:04:32.732385"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.0ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)  [["active", "t"], ["created_at", "2015-03-20 20:22:55.722965"], ["updated_at", "2015-03-20 20:22:55.722965"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.2ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHelpRequest Load (0.2ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "help_requests" ("active", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["active", "f"], ["created_at", "2015-03-20 20:22:55.744062"], ["updated_at", "2015-03-20 20:22:55.744062"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 20:22:55.754974"], ["updated_at", "2015-03-20 20:22:55.754974"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["active", "t"], ["student_id", 1], ["created_at", "2015-03-20 20:22:55.785595"], ["updated_at", "2015-03-20 20:22:55.785595"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mHelpRequest Load (0.1ms)[0m  SELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1  [["student_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 20:22:55.791377"], ["updated_at", "2015-03-20 20:22:55.791377"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "help_requests" ("active", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["active", "f"], ["student_id", 1], ["created_at", "2015-03-20 20:22:55.794746"], ["updated_at", "2015-03-20 20:22:55.794746"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.1ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "grade_level", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grace"], ["grade_level", "4"], ["created_at", "2015-03-20 20:22:55.800486"], ["updated_at", "2015-03-20 20:22:55.800486"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mHelpRequest Load (0.0ms)[0m  [1mSELECT  "help_requests".* FROM "help_requests" WHERE "help_requests"."student_id" = ? AND "help_requests"."active" = 't'  ORDER BY "help_requests"."id" ASC LIMIT 1[0m  [["student_id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction

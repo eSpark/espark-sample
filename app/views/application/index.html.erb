@@ -4,6 +4,17 @@
   <h1>eSpark Teacher Dashboard</h1>
 </div>
 
+<% if HelpRequest.any_active? %>
+  <%@students.each do |s|%>
+    <%hr = s.active_help_request%>
+    <%if hr%>
+      <h3><%="#{hr.student.name} needs help!"%></h3>
+    <%end%>
+  <%end%>
+<% else%>
+  <h3>No active help requests.</h3>
+<% end %>
+
 <table class="table">
 <% @students.each do |student| %>
   <tr>
