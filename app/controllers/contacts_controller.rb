@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def create
-    # params[:contact][:student_id]
+    # params[:student_id]
     @student = Student.find(params[:student_id])
     contact = @student.contacts.new
     contact.requested_at = Time.now
@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
   end
 
   def update
-    # params[:contact][:student_id]
+    # params[:student_id, :id]
     @student = Student.find(params[:student_id])
     contact = Contact.find(params[:id])
     contact.completed_at = Time.now
