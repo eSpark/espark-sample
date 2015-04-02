@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :students
+  resources :students do
+    resources :contacts, only: [:create, :update]  
+  end
   root to: "application#index"
 end
 

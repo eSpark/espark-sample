@@ -1,1 +1,8 @@
 <h1>Welcome, <%= @student.name %></h1>
+
+<% if @student.requested_help? %>
+  <span class="btn btn-default disabled">Help Requested</span>
+<% else %>
+  <%= link_to "Request Help", student_contacts_path(@student), method: "POST", class:"btn btn-primary" %>
+<% end %>
+
