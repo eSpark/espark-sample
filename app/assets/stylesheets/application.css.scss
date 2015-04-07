@@ -24,14 +24,23 @@ body {
   background: url(/assets/student-background.png);
 }
 
-.request-help {
-  background-color: slateblue;
+.help {
   font-size: 130%;
   padding: 20px;
   border-radius: 20px;
   margin: 30px;
+  border: 1px solid dimgray;
+}
+
+.request-help {
+  background-color: slateblue;
 
   &:hover, &:focus {
     background-color: darkslateblue;
   }
+}
+
+.teacher-notified {
+  float: left;
+  background-color: lightgray;
 }
