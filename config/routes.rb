@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :students
+  resources :students do
+    get :request_help
+  end
   root to: "application#index"
 end
 

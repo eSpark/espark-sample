@@ -23,6 +23,11 @@ describe "request help" do
       click_link("Request Help From My Teacher")
     end
 
+    it "should change student help request state and time in database" do
+      expect(@student.help_request_state).to eq(true)
+      expect(@student.help_last_requested).to eq(Time.current)
+    end
+
     it "should hide request help button and display teacher notified message on student page" do
       expect(page).to have_text("Your teacher has been notified of your request for help.")
       expect(page).to_not have_text("Request Help From My Teacher")
