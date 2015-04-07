@@ -2,9 +2,17 @@ require "rails_helper"
 
 describe "request help" do
 
-  it "should display home page" do
-    visit root_path
-    expect(page).to have_content("eSpark Teacher Dashboard")
+  before(:each) do
+    @student = FactoryGirl.create(:student)
+  end
+
+  describe "student show page" do
+
+    it "should display correct text" do
+      visit student_path(@student.id)
+      expect(page).to have_selector("h1", text: "Welcome, #{@student.name}")
+    end
+
   end
 
 end
