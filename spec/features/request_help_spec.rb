@@ -11,6 +11,7 @@ describe "request help" do
     it "should display correct text" do
       visit student_path(@student.id)
       expect(page).to have_selector("h1", text: "Welcome, #{@student.name}")
+      expect(page).to have_link("Request Help From My Teacher")
     end
 
   end
