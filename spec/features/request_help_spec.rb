@@ -19,13 +19,14 @@ describe "request help" do
   describe "clicking request help button" do
 
     before(:each) do
+      allow(Student).to receive(:find).and_return(@student)
       visit student_path(@student.id)
       click_link("Request Help From My Teacher")
     end
 
     it "should change student help request state and time in database" do
       expect(@student.help_request_state).to eq(true)
-      expect(@student.help_last_requested).to eq(Time.current)
+      expect(@student.help_last_requested).to be_within(5.seconds).of(Time.current)
     end
 
     it "should hide request help button and display teacher notified message on student page" do
