@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
     @student.help_request_state = true
     @student.help_last_requested = Time.current
     @student.save
-    redirect_to :back
+    redirect_to :back, notice: "Help requested!"
   end
 
 end

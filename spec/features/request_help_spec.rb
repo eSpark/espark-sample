@@ -30,8 +30,9 @@ describe "request help" do
     end
 
     it "should hide request help button and display teacher notified message on student page" do
-      expect(page).to have_text("Your teacher has been notified of your request for help.")
+      expect(page).to have_selector("p.teacher-notified", text: "Your teacher has been notified of your request for help.")
       expect(page).to_not have_text("Request Help From My Teacher")
+      expect(page).to have_selector("div.alert-success", text: "Help requested!")
     end
 
     it "should show student help request on teacher page" do
