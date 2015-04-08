@@ -7,6 +7,9 @@ module RequestHelpHelper
     end
   end
 
+  # TODO: get clarification: should this list only include students who have requested help within the past day?
+    # instructions say something along those lines, but it seems better to just include all students where help_request_state is true
+    # maybe teacher never got to a certain student the day before, in which case student should still appear on teacher's list
   def students_need_help_list
     @students.select { |s| s.help_request_state }
   end
