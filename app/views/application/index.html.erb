@@ -19,6 +19,7 @@
           <tr>
             <td> <%= student.name %></td>
             <td> <%= display_time(student.help_last_requested) %></td>
+            <td> <%= link_to "Clear Help Request", student_clear_help_request_path(student), class: "btn btn-default" %></td>
           </tr>
         <% end %>
       </tbody>

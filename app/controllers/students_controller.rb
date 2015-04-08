@@ -13,4 +13,11 @@ class StudentsController < ApplicationController
     redirect_to :back, notice: "Help requested!"
   end
 
+  def clear_help_request
+    @student = Student.find(params[:student_id])
+    @student.help_request_state = false
+    @student.save
+    redirect_to :back, notice: "Help request cleared!"
+  end
+
 end
