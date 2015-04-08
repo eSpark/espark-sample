@@ -44,3 +44,17 @@ body {
   float: left;
   background-color: lightgray;
 }
+
+.log-in-as {
+  margin-top: 100px;
+}
+
+.students-help-list {
+  background-color: #89B4FF;
+  border-radius: 10px;
+  padding: 10px 30px;
+
+  thead tr th {
+    border-bottom: 1px solid #ddd;
+  }
+}

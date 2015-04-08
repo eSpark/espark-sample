@@ -4,7 +4,29 @@
   <h1>eSpark Teacher Dashboard</h1>
 </div>
 
-<table class="table">
+<% if students_need_help_list.any? %>
+  <div class="students-help-list">
+    <h3>The following students have requested help:</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last Requested Help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students_need_help_list.each do |student| %>
+          <tr>
+            <td> <%= student.name %></td>
+            <td> <%= display_time(student.help_last_requested) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+
+<table class="table log-in-as">
 <% @students.each do |student| %>
   <tr>
    <td> <%= student.name %></td>
