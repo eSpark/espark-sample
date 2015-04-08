@@ -23,3 +23,46 @@ body {
 .student-experience {
   background: url(/assets/student-background.png);
 }
+
+.help {
+  font-size: 130%;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 30px;
+  border: 1px solid dimgray;
+}
+
+.request-help {
+  background-color: slateblue;
+
+  &:hover, &:focus {
+    background-color: darkslateblue;
+  }
+}
+
+.teacher-notified {
+  float: left;
+  background-color: lightgray;
+}
+
+.log-in-as {
+  margin-top: 100px;
+}
+
+.students-help-list {
+  background-color: #89B4FF;
+  border-radius: 10px;
+  padding: 10px 30px;
+
+  thead tr th {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+table.table tr td {
+  vertical-align: middle;
+}
+
+.student-clear {
+  margin: 43px 30px;
+}
