@@ -12,6 +12,6 @@ module RequestHelpHelper
   end
 
   def display_time(datetime)
-    datetime.strftime("%l:%M%P (%m/%d/%Y)")
+    datetime.strftime("%-l:%M%P (%-m/%-d/%y)")
   end
 end

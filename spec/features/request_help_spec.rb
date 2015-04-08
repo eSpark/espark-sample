@@ -81,6 +81,8 @@ describe "request help" do
       expect(page).to have_selector("h3", text: "The following students have requested help:")
       within(".students-help-list") do
         expect(all("tr")[1].all("td")[0].text).to eq(@students[0].name)
+        expect(all("tr")[1].all("td")[1].text).to eq(Time.current.strftime("%-l:%M%P (%-m/%-d/%y)"))
+        expect(all("tr")[1].all("td")[2]).to have_link("Clear Help Request")
         expect(all("tr")[2].all("td")[0].text).to eq(@students[1].name)
         expect(all("tr")[3].all("td")[0].text).to eq(@students[3].name)
         expect(page).to_not have_text(@students[2].name)
@@ -149,4 +151,3 @@ end
 # TODO: shouldn't student also be able to clear their own request?
   # (they could easily answer their own question before the teacher gets to them...)
 # TODO: older help requests on the top...
-# TODO: test for time display?
