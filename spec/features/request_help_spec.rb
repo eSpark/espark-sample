@@ -37,7 +37,39 @@ describe "request help" do
 
     it "should show student help request on teacher page" do
       visit root_path
-      expect(page).to have_text("#{@student.name} wants your help.")
+      expect(page).to have_text("#{@student.name}")
+    end
+
+  end
+
+  describe "teacher dashboard page" do
+
+    describe "no students have requested help" do
+
+      it "should display no student help info" do
+        visit root_path
+        expect(page).to_not have_selector("h3", text: "The following students have requested help:")
+      end
+
+    end
+
+    describe "students have requested help" do
+
+      before(:each) do
+        @students = FactoryGirl.create_list(:student_requesting_help, 3)
+      end
+
+      it "should display student help info" do
+        visit root_path
+        expect(page).to have_selector("h3", text: "The following students have requested help:")
+        within(".students-help-list") do
+          expect(all("tr")[1].all("td")[0].text).to eq(@students[0].name)
+          expect(all("tr")[2].all("td")[0].text).to eq(@students[1].name)
+          expect(all("tr")[3].all("td")[0].text).to eq(@students[2].name)
+        end
+
+      end
+
     end
 
   end
