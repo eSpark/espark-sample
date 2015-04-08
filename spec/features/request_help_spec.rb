@@ -66,6 +66,32 @@ describe "request help" do
 
     end
 
+    describe "student clearing own help request" do
+
+      before(:each) do
+        allow(Student).to receive(:find).and_return(@student)
+        visit student_path(@student.id)
+        click_link("Request Help From My Teacher")
+        click_link("Clear Help Request")
+      end
+
+      it "should change student help request state in database" do
+        expect(@student.help_request_state).to eq(false)
+      end
+
+      it "should show request help button again and display request cleared message on student page" do
+        expect(page).to_not have_text("Your teacher has been notified of your request for help.")
+        expect(page).to have_selector("a.request-help", text: "Request Help From My Teacher")
+        expect(page).to have_selector("div.alert-success", text: "Help request cleared!")
+      end
+
+      it "should not show student help request on teacher page" do
+        visit root_path
+        expect(page).to_not have_selector(".students-help-list", text: @student.name)
+      end
+
+    end
+
   end
 
   describe "teacher perspective" do
