@@ -70,6 +70,38 @@ describe "request help" do
 
       end
 
+      describe "clearing help requests" do
+
+        before(:each) do
+          visit root_path
+          within(".students-help-list") do
+            within(all("tr")[1]) do
+              click_link("Clear Help Request")
+            end
+            within(all("tr")[3]) do
+              click_link("Clear Help Request")
+            end
+          end
+        end
+
+        it "should change help request statuses in database" do
+          @students.each { |s| s.reload }
+          expect(@students[0].help_request_state).to eq(false)
+          expect(@students[1].help_request_state).to eq(true) # no change
+          expect(@students[2].help_request_state).to eq(false)
+        end
+
+        it "should change display info on screen" do
+          expect(page).to have_selector("div.alert-success", text: "Help request cleared!")
+          within(".students-help-list") do
+            expect(all("tr")[1].all("td")[0].text).to eq(@students[1].name)
+            expect(page).to_not have_text(@students[0].name)
+            expect(page).to_not have_text(@students[2].name)
+          end
+        end
+
+      end
+
     end
 
   end
@@ -91,6 +123,7 @@ end
     # TODO: how to deal with requests that last longer than a day without being cleared?
     # TODO: shouldn't student also be able to clear their own request?
       # (they could easily answer their own question before the teacher gets to them...)
+    # older help requests on the top...
 
 # when teacher clears help request (after talking to student)
   # student disappears from teacher dashboard alert
