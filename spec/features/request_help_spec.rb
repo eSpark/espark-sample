@@ -169,8 +169,44 @@ describe "request help" do
 
     end
 
+    describe "order of help requests on dashboard" do
+
+      before(:each) do
+        @students.each { |s| s.update_attributes(help_request_state: false) }
+      end
+
+      it "should display oldest help requests first" do
+        visit student_path(@students[2])
+        click_link("Request Help From My Teacher")
+        visit student_path(@students[0])
+        click_link("Request Help From My Teacher")
+        visit student_path(@students[3])
+        click_link("Request Help From My Teacher")
+        visit root_path
+        within(".students-help-list") do
+          expect(all("tr")[1].all("td")[0].text).to eq(@students[2].name)
+          expect(all("tr")[2].all("td")[0].text).to eq(@students[0].name)
+          expect(all("tr")[3].all("td")[0].text).to eq(@students[3].name)
+        end
+      end
+
+      it "should display oldest help requests first including when student clears request then re-requests" do
+        visit student_path(@students[0])
+        click_link("Request Help From My Teacher")
+        visit student_path(@students[2])
+        click_link("Request Help From My Teacher")
+        visit student_path(@students[0])
+        click_link("Clear Help Request")
+        click_link("Request Help From My Teacher")
+        visit root_path
+        within(".students-help-list") do
+          expect(all("tr")[1].all("td")[0].text).to eq(@students[2].name)
+          expect(all("tr")[2].all("td")[0].text).to eq(@students[0].name)
+        end
+      end
+
+    end
+
   end
 
 end
-
-# TODO: older help requests on the top...
