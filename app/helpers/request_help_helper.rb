@@ -1,7 +1,10 @@
 module RequestHelpHelper
   def help_request_status_display
+    # adding button for student to clear own help request though wasn't explicitly required
+      # student could easily answer their own question before teacher gets to them
     if @student.help_request_state
-      content_tag :p, "Your teacher has been notified of your request for help.", class: "help teacher-notified"
+      content_tag(:p, "Your teacher has been notified of your request for help.", class: "help teacher-notified") +
+      link_to("Clear Help Request", student_clear_help_request_path(@student), class: "btn btn-default student-clear")
     else
       link_to "Request Help From My Teacher", student_request_help_path(@student), class: "btn btn-primary help request-help"
     end

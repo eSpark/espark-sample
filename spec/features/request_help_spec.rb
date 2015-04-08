@@ -173,6 +173,4 @@ describe "request help" do
 
 end
 
-# TODO: shouldn't student also be able to clear their own request?
-  # (they could easily answer their own question before the teacher gets to them...)
 # TODO: older help requests on the top...
