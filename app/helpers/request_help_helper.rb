@@ -14,7 +14,8 @@ module RequestHelpHelper
     # instructions say something along those lines, but it seems better to just include all students where help_request_state is true
     # maybe teacher never got to a certain student the day before, in which case student should still appear on teacher's list
   def students_need_help_list
-    @students.select { |s| s.help_request_state }
+    @students.select { |s| s.help_request_state }.sort_by { |s| s.help_last_requested }
+
   end
 
   def display_time(datetime)
