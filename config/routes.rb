@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :students
+  resources :students do
+    member do
+      post :ask_for_help
+    end
+  end
+
+  post "/respond_to_help" => "application#respond_to_help"
+
   root to: "application#index"
 end
 

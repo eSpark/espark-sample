@@ -7,4 +7,13 @@ class ApplicationController < ActionController::Base
     @students = Student.all
   end
 
+  def respond_to_help
+    student = Student.find(params[:student_id])
+    help_request = HelpRequest.find(params[:help_request_id])
+    if help_request
+      help_request.destroy
+      flash[:help_request_result] = "Thanks for helping student #{params[:student_id]}!"
+      redirect_to action: :index
+    end
+  end
 end

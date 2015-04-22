@@ -1,1 +1,25 @@
 <h1>Welcome, <%= @student.name %></h1>
+
+<p>
+  <div id="help-requested" style="display: none;">Help requested!</div>
+  <% unless @has_english_request %>
+    <input type="submit" onclick="askForHelp('english')" value="Ask for English Help"/>
+  <% end %>
+  <% unless @has_math_request %>
+    <input type="submit" onclick="askForHelp('Math')" value="Ask for Math Help"/>
+  <% end %>
+</p>
+
+<script>
+  studentId = <%= @student.id %>;
+
+  function askForHelp(subject) {
+    $.ajax("/students/" + studentId + "/ask_for_help", {
+      data: {subject: subject},
+      method: "POST",
+      complete: function() {
+        $("#help-requested").show()
+      }
+    })
+  }
+</script>
