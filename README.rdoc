@@ -1,26 +1,36 @@
-== README
+== PROLOGUE
 
-This is a coding challenge for the eSpark interview.
+Welcome to eSpark! We're so excited to have you here. The rest of the team is, uh, out of the office for, ah...reasons, but just sit tight. I'm sure they'll be back soon.
 
-This is a Rails app that simulates a very simplified version of the student and teacher experience in eSpark.
+In the meanwhile --
 
-* The index page represents the teacher's dashboard to see their students. In the production app you would log in and the experience would be personalized by teacher; in this demo app, there is only one global view of all students.
+**EXPLOSION SOUNDS!!!**
 
-* The students/show page represents the student's view of the app after logging in. In production, this would be shown on an iPad and contain all of the curriculum; in this demo, it shows just the student's name.
+Oh no! And at this time, with everybody gone! What -- what will we -- it will have to be you.
 
-=== Challenge
+I wasn't supposed to tell you this, but the rest of the eSpark engineering team has been called away to Earth-3 under ridiculous circumstances to foil a plot that threatens the very idea of _education itself_! Things were supposed to tend to themselves while they're gone, but now something's happened -- and it's up to you to set them right!
 
-The challenge is to implement a feature on top of this basic app. We want to give students a way to request help from their teacher from their iPad. The components should include:
+== Your mission
 
-* A button in the student experience labeled "Request Help From My Teacher". When a student presses the button, the button disappears and instead shows an indicator that they have notified the teacher.
+Something's gone wrong! Our teachers are reporting that their students aren't able to request help sometimes. This is really serious! You have to fix it!
 
-* In the teacher dashboard view, the teacher should see an alert at the top of the page with any students that have recently requested help within the last day.
+Once you fixed that, we need to some logging. It's possible that the evil genius The Wall has replaced some of our teachers with his insidiously rosy Floyds. In order to track that down, we need a lot of what's going on in the system -- at a minimum, which students have submitted help requests and when those get cleared.
 
-* Teacher should also be able to see the last time that a given student requested help.
+And while you're at it, can you, uh, take a look around? We've suspected that the dread minions of Technical Debt have found a way into the eSpark Central Computer Core Data Banks Microsystem, but before we could look into it, this hacked-together crisis happened! If you can't fix things up, who will?
 
-* Teacher should have the ability to clear the request (presumably after they visit with the student). In this case, then the student sees the button again.
+== The setting
+
+Let me give you a quick overview before you get started. Things are a bit wonky, what with the reality alterations and all, but don't worry about -- work with what's here. The rest of the team will deal with the rest.
+
+* The index page represents the teacher's dashboard to see their students. Normally, you would log in and the experience would be personalized by teacher; in this "demo reality", there is only one global view of all students. Any requests for help are also shown here, and can be acknowledged by the teacher.
+
+* The students/show page represents the student's view of the app after logging in. In the regular continuity, this would be shown on an iPad and contain all of the curriculum; here, it shows just the student's name and lets the students request help if they need it.
 
 === What we're looking for
 
 We'd love to see this submitted as a pull request on this repository. We are looking for clarity of code, fidelity of implementation, and style including appropriate comments and tests.
+
+Time is valuable in these critical moments, and we don't want to waste it -- this exercise should take you no more than a few hours.
+
+And don't forget, when the rest of the team resolves things in some dramatically hard-to-believe fashion and come back, they'll need to review your work and understand what happened here at the base.
 

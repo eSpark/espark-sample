@@ -4,6 +4,19 @@
   <h1>eSpark Teacher Dashboard</h1>
 </div>
 
+<%= flash[:help_request_result] %>
+
+<% HelpRequest.all.each do |request| %>
+  <div>
+    <h3><%= request.student.name %> needs help with <%= request.subject %>!</h3>
+    <%= form_tag url_for("/respond_to_help") do %>
+      <%= hidden_field_tag :student_id, request.student_id %>
+      <%= hidden_field_tag :help_request_id, request.id %>
+      <%= submit_tag "Clear" %>
+      <% end %>
+  </div>
+<% end %>
+
 <table class="table">
 <% @students.each do |student| %>
   <tr>
